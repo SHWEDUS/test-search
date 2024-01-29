@@ -58,7 +58,9 @@ function Main(): React.JSX.Element {
 				) : (
 					<div className='content__items'>
 						{status === 'loading'
-							? [...new Array(6)].map((_, index) => <div>Загрузка...</div>)
+							? [...new Array(6)].map((_, index) => (
+									<div key={index}>Загрузка...</div>
+								))
 							: famous}
 					</div>
 				)}
